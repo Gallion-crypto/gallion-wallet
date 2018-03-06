@@ -103,7 +103,7 @@ void Settings::load() {
   }
 
   QStringList defaultNodesList;
-  defaultNodesList << "gallion.ddns.net:1443" ;
+  defaultNodesList << "gallion.ddns.net:30122" ;
   if (!m_settings.contains(OPTION_RPCNODES)) {
     setRpcNodesList(QStringList() << defaultNodesList);
   } else {
