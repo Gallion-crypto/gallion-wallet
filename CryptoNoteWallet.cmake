@@ -1,0 +1,5 @@
+
+set(CN_PROJECT_NAME "Gallion-wallet")
+set(CN_CURRENCY_DISPLAY_NAME "gallion")
+set(CN_CURRENCY_TICKER "GMT")
+set(CN_VERSION 1.2.1)
