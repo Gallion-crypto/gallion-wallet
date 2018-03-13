@@ -1,7 +1,7 @@
 ﻿**1. Cloner les sources du portefeuille**
 
 ```
-git clone https://github.com/cryptonotefoundation/cryptonotewallet.git
+git clone https://github.com/Gallion-crypto/gallion-wallet.git
 ```
 
 **2. Modifier `CryptoNoteWallet.cmake`**
@@ -15,12 +15,12 @@ set(CN_CURRENCY_TICKER "GMT")
 **3. Définissez un lien symbolique vers les sources de pièces au même niveau que `src`. Par exemple:**
 
 ```
-ln -s ../cryptonote cryptonote
+ln -s ../gallion cryptonote
 ```
 
 Une autre façon est de créer un sous-module git:
 ```
-git submodule add https://github.com/cryptonotefoundation/cryptonote.git cryptonote
+git submodule add https://github.com/Gallion-crypto/gallion.git cryptonote
 ```
 
 Remplacez l'URL par le dépôt distant git de votre pièce.
