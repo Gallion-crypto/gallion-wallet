@@ -61,7 +61,7 @@ void Settings::load() {
     }
 
     if (!m_settings.contains(OPTION_CONNECTION)) {
-         m_connectionMode = "remote";
+         m_connectionMode = "auto";
     }
 
     if (!m_settings.contains(OPTION_DAEMON_PORT)) {
@@ -103,7 +103,7 @@ void Settings::load() {
   }
 
   QStringList defaultNodesList;
-  defaultNodesList << "gallion.ddns.net:1119" << "gallion.ddns.net:6012" << "gallion.ddns.net:6013";
+  defaultNodesList << "gallion.ddns.net:6012";
   if (!m_settings.contains(OPTION_RPCNODES)) {
 	  setRpcNodesList(QStringList() << defaultNodesList);
   } else {
@@ -233,7 +233,7 @@ QString Settings::getConnection() const {
         connection = m_settings.value(OPTION_CONNECTION).toString();
     }
     else {
-    connection = "remote"; // default
+    connection = "auto"; // default
     }
     return connection;
 }
