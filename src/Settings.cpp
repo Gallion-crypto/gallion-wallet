@@ -105,15 +105,15 @@ void Settings::load() {
   QStringList defaultNodesList;
   defaultNodesList << "gallion.ddns.net:1119" << "gallion.ddns.net:6012" << "gallion.ddns.net:6013";
   if (!m_settings.contains(OPTION_RPCNODES)) {
-    setRpcNodesList(QStringList() << defaultNodesList);
+	  setRpcNodesList(QStringList() << defaultNodesList);
   } else {
-    QStringList nodesList = getRpcNodesList();
-    Q_FOREACH (const QString& node, defaultNodesList) {
-      if (!nodesList.contains(node)) {
-        nodesList << node;
-      }
-    }
-    setRpcNodesList(nodesList);
+	  QStringList nodesList = getRpcNodesList();
+	  Q_FOREACH(const QString& node, defaultNodesList) {
+		  if (!nodesList.contains(node)) {
+			  nodesList << node;
+		  }
+	  }
+	  setRpcNodesList(nodesList);
   }
 
   if (!m_settings.contains("recentWallets")) {
